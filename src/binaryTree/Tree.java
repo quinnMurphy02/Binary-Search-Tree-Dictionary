@@ -2,6 +2,28 @@ package binaryTree;
 
 import java.util.Scanner;
 
+//Programmer: Quinn Murphy
+//Date: 11/29/22
+//Assignment 6: Binary Search Tree Dictionary
+//Class: CS145
+//References: StackOverflow, YouTube, 
+// class discussion page
+
+// Alright so this is the main class, Tree. 
+// It has the menu, initializes the actual binary tree,
+// and contains the intro. To search in order, post order, or
+// pre order, use the "show contacts" feature 
+// This program is slightly weird...
+// The add, remove, modify, show contacts features all work,
+// but only if the binary tree is balanced. For instance, if 
+// I make two node in the tree, one 3, and the other 4, I can 
+// modify or delete either of them just fine. But if the tree is 
+// unbalanced or there is only one node, you cannot modify or 
+// delete the node. I am not sure how to make a tree that automatically
+// balances itself, but I am sure it is possible. But with that being said, 
+// this program is a bit janky. But like I said, all the features work 
+// if the tree is balanced. 
+
 public class Tree {
 	// left most child lowest value
 	// right most child highest value
@@ -9,7 +31,6 @@ public class Tree {
 	public static void main(String[] args) {
 
 		BinaryTree tree = new BinaryTree();
-		
 
 		Scanner scan = new Scanner(System.in);
 		Intro();
@@ -61,16 +82,14 @@ public class Tree {
 				System.out.println("(1) In-Order, (2) Post-Order, or (3) Pre-Order?");
 				System.out.println("Please type 1, 2, or 3.");
 				int orderChoice = scan.nextInt();
-				if(orderChoice == 1) {
+				if (orderChoice == 1) {
 					tree.display();
-				}
-				else if(orderChoice == 2) {
+				} else if (orderChoice == 2) {
 					tree.displayPost();
-				}
-				else if(orderChoice == 3) {
+				} else if (orderChoice == 3) {
 					tree.displayPre();
 				}
-				
+
 				break;
 
 			case 3:
@@ -78,12 +97,9 @@ public class Tree {
 				tree.display();
 				int modifyIndex = scan.nextInt();
 				tree.remove(modifyIndex);
-				
+
 				System.out.println("Enter first name?");
 				String modFirstName = scan.next();
-
-				System.out.println("Enter index number for placement?");
-				int modData = scan.nextInt();
 
 				System.out.println("Enter last name?");
 				String modLastName = scan.next();
@@ -106,7 +122,8 @@ public class Tree {
 				System.out.println("Enter phonenumber?");
 				String modPhoneNumber = scan.next();
 
-				tree.insert(new Node(modifyIndex, modFirstName, modLastName, modStreet, modCity, modState, modZip, modEmail, modPhoneNumber));
+				tree.insert(new Node(modifyIndex, modFirstName, modLastName, modStreet, modCity, modState, modZip,
+						modEmail, modPhoneNumber));
 				tree.display();
 				break;
 
@@ -135,7 +152,7 @@ public class Tree {
 
 		}
 
-		  // System.out.println(tree.search(5));
+		// System.out.println(tree.search(5));
 
 	}
 

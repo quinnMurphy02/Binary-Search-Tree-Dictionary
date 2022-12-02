@@ -1,4 +1,15 @@
 package binaryTree;
+//Programmer: Quinn Murphy
+//Date: 11/29/22
+//Assignment 6: Binary Tree
+//Class: CS145
+//References: StackOverflow, YouTube, 
+// class discussion page
+
+// Here is the node class for our data. It is 
+// pretty simple. All it has is one node with 
+// all the strings and index. Practically identical
+// to the other phonebook program. 
 
 public class Node {
 	

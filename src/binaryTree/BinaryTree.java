@@ -2,7 +2,20 @@ package binaryTree;
 
 import java.util.Scanner;
 
-// recursion 
+//Programmer: Quinn Murphy
+//Date: 11/29/22
+//Assignment 6: Binary Search Tree Dictionary
+//Class: CS145
+//References: StackOverflow, YouTube, 
+// class discussion page
+
+// Here is the actual Binary tree class. It contains
+// Every method needed for a typical recursion based 
+// binary search tree. I got most of it from a binary 
+// tree youtube video, but of course added methods 
+// for searching in order, post order, and pre order, 
+// as well as all the data needed for the address book.
+// It works just fine as a binary tree.
 
 public class BinaryTree {
 
